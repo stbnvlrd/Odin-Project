@@ -1,15 +1,41 @@
+favorite_list = {
+    black: 0,
+    silver: 1,
+    gray: 2,
+    marron: 3,
+    red: 4,
+    purple: 5,
+    fuchsia: 6,
+    green: 7,
+    lime: 8,
+    olive: 9,
+    yellow: 10,
+    navy: 11,
+    blue: 12,
+    teal: 13,
+    aqua: 14
+  }
+  
+
 def create_favorite_hash(color, number)
   # return a hash with the following key/value pairs:
   # key of color (as a symbol) with value of the color argument
   # key of number (as a symbol) with the value of the number argument
+
+  
+  favorite_list[color] = number
 end
 
 def favorite_color(favorite_list)
   # return the value of the color key
+
+  favorite_list[key]
 end
 
 def favorite_number(favorite_list)
   # use #fetch to return the value of the number key or 42 if the key is not found
+
+  favorite_list.fetch(key, 42)
 end
 
 def update_favorite_movie(favorite_list, movie)
